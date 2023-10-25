@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _print_char - check character inserted
  * @ch: input character
