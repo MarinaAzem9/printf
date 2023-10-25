@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *_printf customized printf function
  *@word string
@@ -7,22 +6,22 @@
  */
 int _printf(const char *word, ...)
 {
-	int counter;
+	int counter = 0;
 	va_list args;
-	counter = 0;
 	va_start(args, word);
 	while(*word != '\0')
 	{
 		if(*word == '%')
 		{
-			counter += counter + _print_format_custom(*(++word), args);
+			counter = counter + _print_format_custom(*(++word), args);
 			++word;
 		}
-		else
+		else if(*word != '%')
 		{
-			counter += counter+ _print_character(*word);
+			counter = counter + _print_character(*word);
 			++word;
 		}
+			
 	}
 	va_end(args);
 	return(counter);

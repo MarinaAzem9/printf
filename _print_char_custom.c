@@ -3,7 +3,7 @@
 /**
  * _print_char - check character inserted
  * @ch: input character
- * Return: number of characters
+ * Return: 1
  */
 
 int _print_character(int ch)
