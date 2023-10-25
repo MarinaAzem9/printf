@@ -11,11 +11,12 @@ int  _print_format_custom(char frmtsp, va_list args)
 	int counter;
 	counter = 0;
 	if (frmtsp == '%')
-		_print_char_custom(frmtsp);
+		counter+=_print_character(frmtsp);
 	else if (frmtsp == 'c')
-		_print_char_custom(va_args(args, int), int);
+		counter+=_print_character(va_arg(args, int));
 	else if (frmtsp == 's')
-		_print_string_custom(va_args(args, char *));
+		counter+=_print_str(va_arg(args, char *));
 	else if (frmtsp == 'i' || frmtsp == 'd')
-		_print_int_decimal(va_args(args, int), 10, digit);
+		counter+=_print_int_decimal(va_arg(args, int), 10);
+	return(counter);
 }
