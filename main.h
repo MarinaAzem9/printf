@@ -6,7 +6,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-int _print_int_demical(int number1, int basetodive, char * digit);
+int _print_int_demical(int number1, int basetodive);
 int _print_str(char *str);
 int _print_format_custom(char frmstp, va_list args);
 int _print_character(int ch);

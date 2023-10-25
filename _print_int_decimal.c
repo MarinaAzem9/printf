@@ -5,10 +5,10 @@
  * @number1 number inserted as input
  * @basetodive base of the number
  */
-int _print_int_decimal(int number1, int basetodive, char *digit)
+int _print_int_decimal(int number1, int basetodive)
 {
 	int counter = 0;
-		
+	char *digit = "123456789";
 	if (number1 < 0)
 	{
 		write(1, "-", 1);
@@ -19,8 +19,8 @@ int _print_int_decimal(int number1, int basetodive, char *digit)
 		counter += _print_character(digit[number1]);
 	else
 	{
-		counter += _print_int_decimal(number1 / basetodive, basetodive, digit);
-		counter += _print_int_decimal(number1 % basetodive, basetodive, digit);
+		counter += _print_int_decimal(number1 / basetodive, basetodive);
+		counter += _print_int_decimal(number1 % basetodive, basetodive);
 	}
 	return (counter);
 }
