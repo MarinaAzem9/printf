@@ -15,12 +15,12 @@ int _printf(const char *word, ...)
 	{
 		if(*word == '%')
 		{
-			counter = counter + _print_format_custom(*(++word), args);
+			counter += counter + _print_format_custom(*(++word), args);
 			++word;
 		}
 		else
 		{
-			counter = counter+ _print_character(*word);
+			counter += counter+ _print_character(*word);
 			++word;
 		}
 	}
