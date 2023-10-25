@@ -5,6 +5,7 @@
  * @number1 number inserted as input
  * @basetodive base of the number
  */
+
 int _print_int_decimal(int number1, int basetodive)
 {
 	int counter = 0;
