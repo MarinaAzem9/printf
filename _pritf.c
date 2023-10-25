@@ -5,7 +5,7 @@
  *@word string
  *return the number of string characters
  */
-int _printf(const char word, ...)
+int _printf(const char *word, ...)
 {
 	int counter;
 	va_list args;
@@ -15,15 +15,15 @@ int _printf(const char word, ...)
 	{
 		if(*word == '%')
 		{
-			counter = counter + _print_forma_custom(*(++word), args);
-			word++;
+			counter = counter + _print_format_custom(*(++word), args);
+			++word;
 		}
 		else
 		{
-			counter = counter+ _print_char_custom(*word);
-			word++;
+			counter = counter+ _print_character(*word);
+			++word;
 		}
-		va_end(args);
-		return counter;
 	}
+	va_end(args);
+	return(counter);
 }

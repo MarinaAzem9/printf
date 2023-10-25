@@ -8,12 +8,12 @@
 
 int _print_str(char *str)
 {
-	int x = 0
+	int x = 0;
 
 	while (*str)
 	{
-		_print_char((int)*str);
-		x++
+		_print_character((int)*str);
+		x++;
 		str++;
 	}
 

@@ -9,4 +9,4 @@
 int _print_character(int ch)
 {
 	return (write(1, &ch, 1));
-{
+}
