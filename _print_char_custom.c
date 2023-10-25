@@ -3,10 +3,10 @@
 /**
  * _print_char - check character inserted
  * @ch: input character
- * Return: number of characters
+ * Return: 1
  */
 
-int _print_character(int ch)
+int _print_character(char ch)
 {
 	return (write(1, &ch, 1));
 }
