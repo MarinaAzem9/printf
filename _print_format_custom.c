@@ -17,6 +17,6 @@ int  _print_format_custom(char frmtsp, va_list args)
 	else if (frmtsp == 's')
 		counter+=_print_str(va_arg(args, char *));
 	else if (frmtsp == 'i' || frmtsp == 'd')
-		counter+=_print_int_demical(va_arg(args, int), 10);
+		counter+=_print_int_decimal(va_arg(args, int), 10);
 	return(counter);
 }
