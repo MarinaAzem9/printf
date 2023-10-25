@@ -22,7 +22,6 @@ int _printf(const char *word, ...)
 			++word;
 		}
 			
-		counter += 1;
 	}
 	va_end(args);
 	return(counter);

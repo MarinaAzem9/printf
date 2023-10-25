@@ -12,14 +12,14 @@ int _print_int_decimal(int number1, int basetodive)
 	if (number1 < 0)
 	{
 		write(1, "-", 1);
-		counter++;
 		number1 = -number1;
+		counter += _print_int_decimal(number1, basetodive) + 1;
 	}
 	if (number1 < basetodive)
 		counter += _print_character(digit[number1]);
 	else
 	{
-		counter += _print_int_decimal(number1 / basetodive, basetodive);
+		counter = _print_int_decimal(number1 / basetodive, basetodive);
 		counter += _print_int_decimal(number1 % basetodive, basetodive);
 	}
 	return (counter);
